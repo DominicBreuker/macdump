@@ -23,7 +23,7 @@ def main():
 
         dump_system_hashes()
     else:
-        status(f"Loading shadow hash data from {args.from_file}")
+        status(f"Loading shadow hash data from {args.from_file.name}")
         dump_hash_from(args.from_file.read())
 
     status(
