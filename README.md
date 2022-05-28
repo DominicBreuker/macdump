@@ -1,4 +1,7 @@
-# macdump
+<h1 align="center">
+  <img src="assets/macdump.png" alt="naabu" width="600px">
+  <br>
+</h1>
 
 Dump macOS 1.8+ system user hashes to a hashcat-compatible format.
 Can work either directly on the target system to dump hashes of all users (root
