@@ -3,6 +3,7 @@ import subprocess
 from macdump.log import status
 from macdump.shared import dump
 
+
 def dump_system_hashes():
     for user in list_system_users():
         status(f"Dumping hash of {user}")

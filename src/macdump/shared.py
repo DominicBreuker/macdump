@@ -1,6 +1,7 @@
 import string
 import plistlib
 
+
 def dump(user, shadow_hash_data):
     props = to_apple_property_list(shadow_hash_data)
     hash_data = props["SALTED-SHA512-PBKDF2"]
@@ -19,5 +20,3 @@ def to_apple_property_list(shadow_data):
 
 def get_hash_pbkdf2_sha512(entropy, salt, iterations):
     return f"$ml${iterations}${salt.hex()}${entropy.hex()}"
-
-

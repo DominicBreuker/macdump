@@ -6,6 +6,7 @@ from macdump.log import status, error, set_quiet
 from macdump.system import dump_system_hashes
 from macdump.file import dump_hash_from
 
+
 def main():
     """Dump macOS 1.8+ system user hashes"""
 
@@ -30,6 +31,7 @@ def main():
         "Put hashes into file 'hashes.txt', then crack with: hashcat -m 7100 --username hashes.txt -a 0 wordlist.txt"
     )
 
+
 def parse_args():
     parser = argparse.ArgumentParser(
         description="""Dump hashes for macOS 10.8+ system users in hashcat format (username:hash).
@@ -52,6 +54,7 @@ With hashes stored in a file, crack with: hashcat -m 7100 --username hashes.txt 
     )
 
     return parser.parse_args()
+
 
 if __name__ == "__main__":
     main()
