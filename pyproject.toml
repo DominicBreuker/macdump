@@ -25,7 +25,7 @@ dev = ["black", "bumpver", "pytest"]
 Homepage = "https://github.com/dominicbreuker/macdump"
 
 [project.scripts]
-realpython = "macdump.__main__:main"
+macdump = "macdump.__main__:main"
 
 [tool.bumpver]
 current_version = "1.0.0"
