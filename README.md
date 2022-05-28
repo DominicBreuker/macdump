@@ -12,7 +12,7 @@ Use the package manager pip to install to a local machine:
 pip install macdump
 ```
 
-To get a standalone executable to be transfered to target systems, either download
+To get a standalone executable to be transferred to target systems, either download
 one from the release pages or build it with [pyinstaller](https://pyinstaller.org/en/stable/),
 as shown in the [Makefile](Makefile) (`make build-executable`).
 
@@ -25,12 +25,13 @@ version of the script. Find it in [macdump.py](macdump.py)
 
 To run macdump directly on the target system, transfer either the standalone
 binary or the script [macdump.py](macdump.py) and run it as root.
-Output will be roughly as seen below:
+Obviously, this will only work on macOS.
+Output will be roughly as seen below.
 
 Running the script (`sudo python macdump.py`) or the binary (`sudo ./macdump`):
 
 ```
- $ sudo python3 macdump.py
+ $ sudo python macdump.py
 [+] Dumping hashes of all system users
 [+] Dumping hash of testuser
 [+] Authentication hint:  This is our default password
@@ -40,7 +41,7 @@ testuser:$ml$45871$f601fc65d033857cfc926ec2332058f791c1844f4e4fbb763568e063eafd7
 
 ### Offline
 
-You can extract the shadow hash data, store it to a text file and use that as
+You can extract the shadow hash data on the target Mac, store it to a text file and use that as
 input for macdump.
 To get the data for user `username`, run:
 
@@ -83,6 +84,11 @@ Hash.Mode........: 7100 (macOS v10.8+ (PBKDF2-SHA512))
 
 Try this with the hash seen in the readme and a wordlist containing password
 `pass123` to verify that your setup works.
+
+## Disclaimer
+
+Macdump is for research and educational purposes only. 
+Do not run this without consent on anybody's machine.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
